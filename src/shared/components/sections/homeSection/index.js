@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { isArray } from 'lodash';
 
-import NewsContainer from '../../../containers/newsContainer';
+import HomeSectionContainer from '../../../containers/homeSectionContainer';
+import { getNews } from '../../../actions/newsActions';
 import NewsElement from '../../elements/newsElement';
 
 class HomeSection extends Component {
 
   static renderNews(news) {
     if (isArray(news) && news.length) {
-      return news.map(item => <NewsElement {...item} key={item.id} />);
+      return news.map(item => <NewsElement {...item} key={item._id} />);
     }
+  }
+
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(getNews());
   }
 
   render() {
@@ -21,4 +27,4 @@ class HomeSection extends Component {
   }
 }
 
-export default NewsContainer(HomeSection);
+export default HomeSectionContainer(HomeSection);
