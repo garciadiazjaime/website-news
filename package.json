@@ -1,12 +1,12 @@
 {
   "name": "website-news",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
     "build": "npm run build-be && npm run build-fe",
     "build-be": "./node_modules/babel-cli/bin/babel.js src -d build",
     "build-fe": "./node_modules/.bin/webpack",
-    "start": "node --use_strict ./build/server/server.js",
+    "start": "node --use_strict start.js",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "postinstall": "postinstall-build build"
   },
