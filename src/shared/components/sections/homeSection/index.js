@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { isArray } from 'lodash';
 
 import HomeSectionContainer from '../../../containers/homeSectionContainer';
@@ -9,7 +10,7 @@ class HomeSection extends Component {
 
   static renderNews(news) {
     if (isArray(news) && news.length) {
-      return news.map(item => <NewsElement {...item} key={item._id} />);
+      return news.slice(0, 5).map(item => <NewsElement {...item} key={item._id} />);
     }
   }
 
@@ -20,11 +21,18 @@ class HomeSection extends Component {
 
   render() {
     const { news } = this.props;
-    console.log('news', news);
-    return (<div>
+    return (<div className="container">
       {HomeSection.renderNews(news)}
     </div>);
   }
 }
+
+HomeSection.propTypes = {
+  news: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+HomeSection.defaultProps = {
+  selectedGroup: [],
+};
 
 export default HomeSectionContainer(HomeSection);

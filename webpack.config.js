@@ -38,6 +38,10 @@ const config = {
       test: /\.jsx?/,
       loaders: ['babel-loader'],
       include: APP_DIR
+    }, {
+      test: /\.scss$/,
+      loaders: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'],
+      include: APP_DIR
     }]
   },
 
