@@ -1,0 +1,28 @@
+{
+  "name": "website-news",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel.js src -d build",
+    "start": "node --use_strict ./build/server/server.js"
+  },
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "convict": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "react": "^15.6.1"
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      "latest"
+    ]
+  }
+}
