@@ -4,7 +4,7 @@
   "main": "start.js",
   "scripts": {
     "build": "npm run build-be && npm run build-fe",
-    "build-be": "./node_modules/babel-cli/bin/babel.js src -d build",
+    "build-be": "./node_modules/.bin/babel src -d build",
     "build-fe": "./node_modules/.bin/webpack",
     "start": "node --use_strict start.js",
     "dev": "./node_modules/.bin/webpack-dev-server",
@@ -20,6 +20,7 @@
     "express": "^4.15.3",
     "lodash": "^4.17.4",
     "morgan": "^1.8.2",
+    "postinstall-build": "^5.0.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
