@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazy-load';
 
 import style from './style.scss';
 
 class NewsElement extends Component {
 
   render() {
-    const { id, title, image, source } = this.props;
+    const { id, title, image, link, source } = this.props;
     return (<div className={`list-group-item ${style.item}`}>
       <p>
-        <b>{title}</b>
+        <b><a href={link} target="_blank">{title}</a></b>
       </p>
-      <p>
+      <LazyLoad offsetVertical={500}>
         <img src={image} className="img-responsive" />
-      </p>
+      </LazyLoad>
       Fuente: {source}
     </div>);
   }
