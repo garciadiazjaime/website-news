@@ -10,7 +10,7 @@ class HomeSection extends Component {
 
   static renderNews(news) {
     if (isArray(news) && news.length) {
-      return news.slice(0, 20).map(item => <NewsElement {...item} key={item._id} />);
+      return news.slice(0, 50).map(item => <NewsElement {...item} key={item._id} />);
     }
   }
 
