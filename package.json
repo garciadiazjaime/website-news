@@ -8,7 +8,8 @@
     "build-fe": "./node_modules/webpack/bin/webpack.js",
     "start": "node --use_strict start.js",
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "postinstall": "postinstall-build build"
+    "postinstall": "postinstall-build build",
+    "deploy": "git checkout master && git pull origin develop && git push upstream HEAD"
   },
   "repository": {},
   "license": "MIT",

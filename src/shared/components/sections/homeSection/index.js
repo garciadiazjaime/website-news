@@ -21,7 +21,7 @@ class HomeSection extends Component {
 
   render() {
     const { news } = this.props;
-    return (<div className="container">
+    return (<div>
       {HomeSection.renderNews(news)}
     </div>);
   }
