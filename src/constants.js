@@ -1,7 +1,7 @@
 // FE constants
 
 const constants = {
-  apiUrl: 'http://127.0.0.1:3000/api/',
+  apiUrl: 'http://apinews-hoytocame.rhcloud.com/api/',
   paragraphsToShow: 5,
 };
 
