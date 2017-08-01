@@ -1,3 +1,5 @@
+import { isArray } from 'lodash';
+
 import RequestUtil from '../../utils/requestUtil';
 import constants from '../../../constants';
 
@@ -28,7 +30,7 @@ function getNewsHelper() {
 
 function shouldFetchNews(state) {
   const news = state.newsHelper || {};
-  return news.isProcessing !== true;
+  return !isArray(news.data) || !news.data.length;
 }
 
 export function getNews() {
