@@ -1,7 +1,7 @@
 // FE constants
 
 const constants = {
-  apiUrl: 'http://apinews-hoytocame.rhcloud.com/api/',
+  proxyUrl: window.proxyUrl,
   paragraphsToShow: 5,
 };
 

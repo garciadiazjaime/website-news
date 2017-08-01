@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
 import config from '../config';
+import apiRoutes from './routes/apiRoutes';
 
 const app = express();
 
@@ -17,13 +18,17 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('static'));
 
+app.use('/api', apiRoutes);
+
 app.get('/health', (req, res) => {
   res.writeHead(200);
   res.end();
 });
 
 app.get('/*', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    proxyUrl: config.get('api.proxy'),
+  });
 });
 
 app.set('ipaddress', config.get('ipaddress'));

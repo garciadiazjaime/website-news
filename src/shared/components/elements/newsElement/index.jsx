@@ -9,11 +9,13 @@ class NewsElement extends Component {
   render() {
     const { title, image, link, source } = this.props;
     return (<div className={style.item}>
-      <LazyLoad offsetVertical={500}>
-        <Link to={`/articulo/${this.props._id}`} rel="nofollow" title={title}>
-          <img src={image} className={style.image} alt={title} />
-        </Link>
-      </LazyLoad>
+      { image ? <LazyLoad offsetVertical={500}>
+          <Link to={`/articulo/${this.props._id}`} rel="nofollow" title={title}>
+            <img src={image} className={style.image} alt={title} />
+          </Link>
+        </LazyLoad> : null
+      }
+
       <div className={style.title}>
         <Link to={`/articulo/${this.props._id}`} rel="nofollow" title={title}>{title}</Link>
         <span>Fuente: {source}</span>
