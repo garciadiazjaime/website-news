@@ -1,12 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import cors from 'cors';
 
 import config from '../config';
+import apiRoutes from './routes/apiRoutes';
 
 const app = express();
 
 app.use(morgan('dev'));
+app.use(cors());
 
 app.set('views', './src/server/views');
 app.set('view engine', 'ejs');
@@ -17,13 +20,17 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('static'));
 
+app.use('/api', apiRoutes);
+
 app.get('/health', (req, res) => {
   res.writeHead(200);
   res.end();
 });
 
 app.get('/*', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    proxyUrl: config.get('api.proxy'),
+  });
 });
 
 app.set('ipaddress', config.get('ipaddress'));

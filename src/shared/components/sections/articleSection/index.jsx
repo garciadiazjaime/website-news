@@ -36,7 +36,7 @@ class ArticleSection extends Component {
     const article = ArticleSection.getNews(news, match.params.id);
 
     return article ? (<div className={style.article}>
-      <img src={article.image} alt={article.title} />
+      { article.image ? <img src={article.image} alt={article.title} /> : null}
       <div className={style.info}>
         <h2>{article.title}</h2>
         {ArticleSection.renerDescription(article.description)}

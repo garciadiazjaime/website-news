@@ -14,10 +14,16 @@ const config = convict({
     env: 'OPENSHIFT_NODEJS_PORT',
   },
   api: {
+    proxy: {
+      doc: 'API URL',
+      format: String,
+      default: 'http://127.0.0.1:3030/api/',
+      env: 'NEWS_PROXY_URL',
+    },
     url: {
       doc: 'API URL',
       format: String,
-      default: 'http://127.0.0.1:3000/',
+      default: 'http://127.0.0.1:3000/api/',
       env: 'NEWS_API_URL',
     },
   },
