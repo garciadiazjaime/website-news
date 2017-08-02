@@ -40,6 +40,12 @@ const config = convict({
       default: '6379',
       env: 'OPENSHIFT_REDIS_PORT',
     },
+    password: {
+      doc: 'REDIS PASSWORD',
+      format: String,
+      default: '',
+      env: 'REDIS_PASSWORD',
+    },
   },
   secret: {
     doc: 'session secret',

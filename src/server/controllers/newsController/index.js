@@ -4,10 +4,11 @@ import config from '../../../config';
 
 const client = redis.createClient({
   host: config.get('redis.host'),
-  port: config.get('redis.port')
+  port: config.get('redis.port'),
+  password: config.get('redis.password'),
 });
 const redisNewsKey = 'news';
-const redisExpiration = 10; // 30 mins
+const redisExpiration = 30; // 30 mins
 
 export default class NewsController {
 
