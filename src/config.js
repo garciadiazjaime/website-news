@@ -27,6 +27,20 @@ const config = convict({
       env: 'NEWS_API_URL',
     },
   },
+  redis: {
+    host: {
+      doc: 'REDIS HOST',
+      format: String,
+      default: '127.0.0.1',
+      env: 'OPENSHIFT_REDIS_HOST',
+    },
+    port: {
+      doc: 'REDIS PORT',
+      format: String,
+      default: '6379',
+      env: 'OPENSHIFT_REDIS_PORT',
+    },
+  },
   secret: {
     doc: 'session secret',
     format: String,
