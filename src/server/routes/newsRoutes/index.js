@@ -7,14 +7,8 @@ const router = express.Router({mergeParams: true});
 
 router.get('/', (req, res) => {
   NewsController.list(req.params)
-    .then(data => res.json({
-      status: true,
-      data: data.entity.data,
-    }))
-    .catch(error => res.json({
-      status: false,
-      error,
-    }));
+    .then(data => res.json(data))
+    .catch(error => res.json(error));
 });
 
 export default router;

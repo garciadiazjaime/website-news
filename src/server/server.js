@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import cors from 'cors';
 
 import config from '../config';
 import apiRoutes from './routes/apiRoutes';
@@ -8,6 +9,7 @@ import apiRoutes from './routes/apiRoutes';
 const app = express();
 
 app.use(morgan('dev'));
+app.use(cors());
 
 app.set('views', './src/server/views');
 app.set('view engine', 'ejs');
