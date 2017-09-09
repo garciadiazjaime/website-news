@@ -2,9 +2,13 @@ import redis from 'redis';
 import RequestUtil from '../../../shared/utils/requestUtil';
 import config from '../../../config';
 
-const client = redis.createClient();
-const redisNewsKey = 'news';
-const redisExpiration = 10; // 30 mins
+const client = redis.createClient({
+  host: config.get('redis.host'),
+  port: config.get('redis.port'),
+  password: config.get('redis.password'),
+});
+const redisNewsKey = 'website-news:news';
+const redisExpiration = 30; // 30 mins
 
 export default class NewsController {
 

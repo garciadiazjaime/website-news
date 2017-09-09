@@ -4,7 +4,7 @@ const config = convict({
   ipaddress: {
     doc: 'IP the application runs on',
     format: 'ipaddress',
-    default: '127.0.0.1',
+    default: '0.0.0.0',
     env: 'OPENSHIFT_NODEJS_IP',
   },
   port: {
@@ -25,6 +25,26 @@ const config = convict({
       format: String,
       default: 'http://127.0.0.1:3000/api/',
       env: 'NEWS_API_URL',
+    },
+  },
+  redis: {
+    host: {
+      doc: 'REDIS HOST',
+      format: String,
+      default: '127.0.0.1',
+      env: 'REDIS_PORT_6379_TCP_ADDR',
+    },
+    port: {
+      doc: 'REDIS PORT',
+      format: String,
+      default: '6379',
+      env: 'REDIS_PORT_6379_TCP_PORT',
+    },
+    password: {
+      doc: 'REDIS PASSWORD',
+      format: String,
+      default: '',
+      env: 'REDIS_PASSWORD',
     },
   },
   secret: {
