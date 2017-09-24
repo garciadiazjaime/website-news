@@ -27,5 +27,7 @@ Checking Envs
 docker pull redis
 docker run -d --name redis -p 6379:6379 redis
 
-docker build -t mintitmedia/website-news .
-docker run -d -p 49160:3030 --link redis:redis mintitmedia/website-news
+docker build -t garciadiazjaime/website-news .
+docker run -e API_URL=http://apinews-hoytocame.rhcloud.com/api/ -d -p 49175:3075 --link redis:redis garciadiazjaime/website-news
+docker push garciadiazjaime/website-news
+docker pull garciadiazjaime/website-news

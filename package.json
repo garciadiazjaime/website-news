@@ -6,10 +6,9 @@
     "build": "npm run build-be && npm run build-fe",
     "build-be": "./node_modules/.bin/babel src -d build",
     "build-fe": "./node_modules/webpack/bin/webpack.js",
-    "start": "node --use_strict start.js",
+    "start": "node --use_strict ./build/server/server.js",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "postinstall": "postinstall-build build",
-    "deploy": "git checkout master && git pull origin develop && git push upstream HEAD",
     "watch-be": "./node_modules/nodemon/bin/nodemon.js build/server/server.js",
     "watch-build-be": "npm run build-be -- -w"
   },

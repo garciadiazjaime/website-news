@@ -23,7 +23,7 @@ function receiveNews(data) {
 function getNewsHelper() {
   return (dispatch) => {
     dispatch(requestNews());
-    return RequestUtil.get(`${constants.proxyUrl}news`)
+    return RequestUtil.get('/api/news')
       .then(response => dispatch(receiveNews(response)));
   };
 }

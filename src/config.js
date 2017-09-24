@@ -5,26 +5,18 @@ const config = convict({
     doc: 'IP the application runs on',
     format: 'ipaddress',
     default: '0.0.0.0',
-    env: 'OPENSHIFT_NODEJS_IP',
   },
   port: {
     doc: 'Port the application listens on',
     format: 'port',
-    default: '3030',
-    env: 'OPENSHIFT_NODEJS_PORT',
+    default: '3075',
   },
   api: {
-    proxy: {
-      doc: 'API URL',
-      format: String,
-      default: 'http://127.0.0.1:3030/api/',
-      env: 'NEWS_PROXY_URL',
-    },
     url: {
       doc: 'API URL',
       format: String,
-      default: 'http://127.0.0.1:3000/api/',
-      env: 'NEWS_API_URL',
+      default: 'http://127.0.0.1:3000/api',
+      env: 'API_URL',
     },
   },
   redis: {
@@ -40,17 +32,6 @@ const config = convict({
       default: '6379',
       env: 'REDIS_PORT_6379_TCP_PORT',
     },
-    password: {
-      doc: 'REDIS PASSWORD',
-      format: String,
-      default: '',
-      env: 'REDIS_PASSWORD',
-    },
-  },
-  secret: {
-    doc: 'session secret',
-    format: String,
-    default: 'kolbe',
   },
 });
 

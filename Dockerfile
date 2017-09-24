@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3030
+EXPOSE 3075
 
-CMD [ "npm", "start" ]
+CMD [ "node", "./build/server/server.js" ]

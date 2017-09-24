@@ -28,9 +28,7 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-  res.render('index', {
-    proxyUrl: config.get('api.proxy'),
-  });
+  res.render('index');
 });
 
 app.set('ipaddress', config.get('ipaddress'));
