@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
+    "export": "npm run data && sapper export --legacy",
     "start": "node __sapper__/build",
     "data": "node scripts/data.js"
   },
