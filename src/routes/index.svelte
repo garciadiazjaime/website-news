@@ -1,13 +1,7 @@
 <script>
-	import { onMount } from 'svelte';
+	import Lazy from 'svelte-lazy';
 
 	export let news
-	let Lazy;
-
-	onMount(async () => {
-		const module = await import('svelte-lazy');
-		Lazy = module.default;
-	});
 
 	function itemClickHandler(url) {
 		window.open(url, "new_blank")
@@ -89,9 +83,9 @@
 	data-source={item.source}
 	data-date={item.createdAt}>
 	<div class="image-container">
-		<svelte:component this={Lazy} height={300}>
+		<Lazy height={300}>
 			<div class="image" style={`background-image: url(${item.image})`}></div>
-		</svelte:component>
+		</Lazy>
 	</div>
 	<div class="content">
 		<h2>{item.title}</h2>
