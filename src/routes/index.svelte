@@ -104,3 +104,14 @@
 	</div>
 </div>
 {/each}
+
+<footer>
+	Proyecto de <br />
+	<a href="http://www.mintitmedia.com" title="Sofware Development Tijuana">Mint IT Media</a>
+	<br />
+	<a href="Reporte de Garitas San Diego / Tijuana">GaritaCenter</a>
+	<br />
+	<a href="http://www.playami.com" title="Qué comer en Playas de Tijuana">Playami</a>
+	<br />
+	<a href="https://www.feedmetj.com/" title="¿Qué comer en Tijuana?">Feedmetj</a>
+</footer>
