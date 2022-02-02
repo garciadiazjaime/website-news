@@ -4,10 +4,6 @@
 	export let news
 	const title = 'Noticias de hoy. Últimas Noticias de México'
 	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios y más.'
-
-	function itemClickHandler(url) {
-		window.open(url, "new_blank")
-	}
 </script>
 
 <script context="module">
@@ -54,8 +50,7 @@
 
 	@media (max-width: 480px) {
 		h1 {
-			padding: 12px;
-			margin: 0;
+			padding: 222px 0;
 			background-color: #000;
 			color: #FFF;
 			text-align: center;
