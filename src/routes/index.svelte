@@ -2,6 +2,8 @@
 	import Lazy from 'svelte-lazy';
 
 	export let news
+	const title = 'Noticias de hoy. Últimas Noticias de México'
+	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios y más.'
 
 	function itemClickHandler(url) {
 		window.open(url, "new_blank")
@@ -46,8 +48,8 @@
 		margin-bottom: 12px;
 	}
 
-	.btn:hover {
-		cursor: pointer;
+	a {
+		text-decoration: none;
 	}
 
 	@media (max-width: 480px) {
@@ -73,12 +75,18 @@
 </style>
 
 <svelte:head>
-	<title>Últimas Noticias de México</title>
+	<title>{title}</title>
+	<meta property="og:title" content={title}>
+	<meta property="og:description" content={description}>
+	<meta property="og:image" content="https://www.noticiasmexico.org/banner.png">
+	<meta property="og:url" content="https://www.noticiasmexico.org/">
+	<meta name="description" content={description}>
+	<link href="https://www.google-analytics.com" rel="dns-prefetch">
 </svelte:head>
 
-<h1>Noticias de México</h1>
+<h1>Últimas Noticias de México</h1>
 
-{#each news as item}
+{#each news.slice(0, 42) as item}
 <div class="item"
 	data-source={item.source}
 	data-date={item.createdAt}>
@@ -94,12 +102,13 @@
 				<p>{description}</p>
 			{/each}
 		</div>
-		<div class="btn" on:click={() => itemClickHandler(item.url)}>ir a noticia original @{item.source}</div>
+		<a href={item.url} target="_blank" rel="nofollow noreferrer">noticia extraida de {item.source}</a>
 	</div>
 </div>
 {/each}
 
 <footer>
+	<p>{description}</p>
 	Proyecto en Colaboración con: <br />
 	<a href="https://www.garitacenter.com/">Reporte de Garitas | Linea Tijuana / San Ysidro - Otay</a>
 	<br />
