@@ -27,13 +27,10 @@
 		width: 100%;
 		overflow: hidden;
 	}
-	.image {
+	img {
 		width: 100%;
 		height: 400px;
-		display: block;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		object-fit: contain;
 	}
 
 	.content {
@@ -62,7 +59,7 @@
 			height: 400px;
 			width: 100%;
 		}
-		.image {
+		img {
 			width: 100%;
 			height: 400px;
 		}
@@ -87,7 +84,7 @@
 	data-date={item.createdAt}>
 	<div class="image-container">
 		<Lazy height={300}>
-			<div class="image" style={`background-image: url(${item.image})`}></div>
+			<img src={item.image} alt={`Noticia: ${item.title}`} />
 		</Lazy>
 	</div>
 	<div class="content">
@@ -97,7 +94,7 @@
 				<p>{description}</p>
 			{/each}
 		</div>
-		<a href={item.url} target="_blank" rel="nofollow noreferrer">noticia extraida de {item.source}</a>
+		<a href={item.url} target="_blank" rel="nofollow noreferrer">noticia de última hora extraidas de {item.source}</a>
 	</div>
 </div>
 {/each}
