@@ -30,12 +30,11 @@
 	img {
 		width: 100%;
 		height: 400px;
-		object-fit: contain;
+		object-fit: cover;
 	}
 
 	.content {
 		padding: 12px;
-		flex: 400px;
 	}
 	.description {
 		margin-bottom: 12px;
@@ -82,13 +81,15 @@
 <div class="item"
 	data-source={item.source}
 	data-date={item.createdAt}>
+	<div class="content">
+		<h2>{item.title}</h2>
+	</div>
 	<div class="image-container">
 		<Lazy height={300}>
 			<img src={item.image} alt={`Noticia: ${item.title}`} />
 		</Lazy>
 	</div>
 	<div class="content">
-		<h2>{item.title}</h2>
 		<div class="description">
 			{#each item.description as description}
 				<p>{description}</p>
