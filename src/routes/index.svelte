@@ -3,7 +3,7 @@
 
 	export let news
 	const title = 'Noticias de hoy. Últimas Noticias de México'
-	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios y más.'
+	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios, deportes y más.'
 </script>
 
 <script context="module">
@@ -78,7 +78,7 @@
 
 <h1>Últimas Noticias de México</h1>
 
-{#each news.slice(0, 42) as item}
+{#each news as item}
 <div class="item"
 	data-source={item.source}
 	data-date={item.createdAt}>
@@ -94,12 +94,17 @@
 				<p>{description}</p>
 			{/each}
 		</div>
-		<a href={item.url} target="_blank" rel="nofollow noreferrer">noticia de última hora extraidas de {item.source}</a>
+		<a href={item.url} target="_blank" rel="nofollow noreferrer">noticia extraidas de {item.source}</a>
 	</div>
 </div>
 {/each}
 
 <footer>
+	<p>
+		Noticias México, tiene como objectivo dar a conocer las últimas noticias que los diferentes
+		medios de comunicación publican en México. La intención es tenerte informado de los acontecimientos
+		que suceden en nuestro país a través de una plataforma rápida y amigable.
+	</p>
 	<p>{description}</p>
 	Proyecto en Colaboración con: <br />
 	<a href="https://www.garitacenter.com/">Reporte de Garitas | Linea Tijuana / San Ysidro - Otay</a>
@@ -109,4 +114,8 @@
 	<a href="http://www.playami.com">¿Qué comer en Playas de Tijuana?</a>
 	<br />
 	<a href="https://www.mintitmedia.com/">Desarrollo Web en Tijuana</a>
+	<br />
+	<a href="https://www.comprarcasatijuana.com/">Comprar casa en Tijuana</a>
+	<br />
+	<a href="http://www.larutadelvinoensenada.com/">La Ruta del Vino Ensenada</a>
 </footer>

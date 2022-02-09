@@ -7,7 +7,9 @@ const apiURL = process.env.API_URL
 async function getNews() {
   debug('getting news...')
   const response = await fetch(`${apiURL}/news`)
-  const news = await response.json()
+  const data = await response.json()
+
+  const news = data.filter(item => !item.image.includes('undefined') && item.title).slice(0, 30)
 
   fs.writeFileSync('./static/news.json', JSON.stringify(news));
 }
