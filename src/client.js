@@ -1,5 +1,15 @@
 import * as sapper from '@sapper/app';
 
-sapper.start({
-	target: document.querySelector('#sapper')
-});
+const target = document.querySelector('#sapper')
+
+if (!target) {
+	setTimeout(init, 0)
+} else {
+	init()
+}
+
+function init() {
+	sapper.start({
+		target: document.querySelector('#sapper')
+	});
+}

@@ -16,7 +16,7 @@
 
 	@media (max-width: 480px) {
 		main {
-			font-size: 1.2em;
+			font-size: 1.4em;
 			padding: 0;
 		}
 	}

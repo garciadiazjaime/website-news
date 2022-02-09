@@ -25,12 +25,11 @@
 	.image-container {
 		margin: 0 auto;
 		width: 100%;
-		overflow: hidden;
 	}
 	img {
 		width: 100%;
-		height: 400px;
-		object-fit: cover;
+		height: 300px;
+		object-fit: contain;
 	}
 
 	.content {
@@ -38,6 +37,10 @@
 	}
 	.description {
 		margin-bottom: 12px;
+	}
+
+	.description p {
+		word-break: break-word;
 	}
 
 	a {
@@ -50,17 +53,10 @@
 			background-color: #000;
 			color: #FFF;
 			text-align: center;
+			margin-bottom: 20px;
 		}
 		.item {
 			display: block;
-		}
-		.image-container {
-			height: 400px;
-			width: 100%;
-		}
-		img {
-			width: 100%;
-			height: 400px;
 		}
 	}
 </style>
