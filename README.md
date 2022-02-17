@@ -6,26 +6,21 @@
 
 [Reporte de Garitas Tijuana](https://www.garitacenter.com/)
 
+### Playami
+
+[Qué comer en Playas de Tijuana?](http://www.playami.com/)
 
 ### Feedmetj
 
 [Qué comer en Tijuana?](https://www.feedmetj.com/)
 
-
 ### Comprar Casa Tijuana
 
 [Casas en Venta en Tijuana](https://www.comprarcasatijuana.com/)
 
+### El Valle de Guadalupe
 
-### El Valle
-
-[La Ruta del Vino Ensenada](http://www.larutadelvinoensenada.com/)
-
-
-### Playami
-
-[Qué comer en Playas de Tijuana?](http://www.playami.com/)
-
+[La Ruta del Vino Ensenada](https://www.larutadelvinoensenada.com/)
 
 ### Mint IT Media
 
