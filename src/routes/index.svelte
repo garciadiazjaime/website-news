@@ -65,7 +65,7 @@
 	<title>{title}</title>
 	<meta property="og:title" content={title}>
 	<meta property="og:description" content={description}>
-	<meta property="og:image" content="https://www.noticiasmexico.org/banner.png">
+	<meta property="og:image" content="https://www.noticiasmexico.org/banner.webp">
 	<meta property="og:url" content="https://www.noticiasmexico.org/">
 	<meta name="description" content={description}>
 	<link href="https://www.google-analytics.com" rel="dns-prefetch">
