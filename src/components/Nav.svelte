@@ -51,6 +51,9 @@
 <nav>
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">noticias</a></li>
+		<li><a aria-current="{segment === 'negocios' ? 'page' : undefined}" href="noticias/negocios">negocios</a></li>
+		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica">política</a></li>
+		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes">deportes</a></li>
 		<li><a aria-current="{segment === 'nosotros' ? 'page' : undefined}" href="nosotros">nosotros</a></li>
 	</ul>
 </nav>

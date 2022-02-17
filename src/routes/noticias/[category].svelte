@@ -2,17 +2,33 @@
 	import Lazy from 'svelte-lazy';
 
 	export let news
-	const title = 'Noticias de hoy. Últimas Noticias de México'
-	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios, deportes y más.'
+	export let category
+
+	const sections = {
+		negocios: {
+			title: 'Últimas Noticias de México sobre Negocios',
+			description: 'Conoce las Noticias de Últimas sobre Negocios de México.'
+		},
+		politica: {
+			title: 'Últimas Noticias de México sobre Política',
+			description: 'Conoce las Noticias de Últimas sobre Política.'
+		},
+		deportes: {
+			title: ' Últimas Noticias de México sobre Deportes',
+			description: 'Conoce las Noticias de Últimas sobre Deportes.'
+		},
+	}
 </script>
 
 <script context="module">
-	export async function preload() {
-		const response = await this.fetch('process.env.API_URL/news')
+	export async function preload(page) {
+		const { category } = page.params;
+		const response = await this.fetch(`process.env.API_URL/news/${category}`)
 		const news = await response.json();
 
 		return {
-			news
+			news,
+			category
 		}
 	}
 </script>
@@ -62,16 +78,16 @@
 </style>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta property="og:title" content={title}>
-	<meta property="og:description" content={description}>
+	<title>{sections[category].title}</title>
+	<meta property="og:title" content={sections[category].title}>
+	<meta property="og:description" content={sections[category].description}>
 	<meta property="og:image" content="https://www.noticiasmexico.org/banner.png">
 	<meta property="og:url" content="https://www.noticiasmexico.org/">
-	<meta name="description" content={description}>
+	<meta name="description" content={sections[category].description}>
 	<link href="https://www.google-analytics.com" rel="dns-prefetch">
 </svelte:head>
 
-<h1>Últimas Noticias de México</h1>
+<h1>{sections[category].title}</h1>
 
 {#each news as item, index}
 <div class="item"
@@ -102,4 +118,4 @@
 </div>
 {/each}
 
-<p>{description}</p>
+<p>{sections[category].description}</p>
