@@ -1,5 +1,14 @@
 <script>
+	import { publish, subscribe } from "../support/events"
 	export let segment;
+
+	subscribe('update_menu', (path) => {
+		segment = path
+	})
+
+	function clickHandler() {
+		publish('update_menu', this.attributes.href.value.split('/').pop())
+	}
 </script>
 
 <style>
@@ -50,10 +59,10 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">noticias</a></li>
-		<li><a aria-current="{segment === 'negocios' ? 'page' : undefined}" href="noticias/negocios">negocios</a></li>
-		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica">política</a></li>
-		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes">deportes</a></li>
-		<li><a aria-current="{segment === 'nosotros' ? 'page' : undefined}" href="nosotros">nosotros</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="." on:click={clickHandler}>noticias</a></li>
+		<li><a aria-current="{segment === 'negocios' ? 'page' : undefined}" href="noticias/negocios" on:click={clickHandler}>negocios</a></li>
+		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica" on:click={clickHandler}>política</a></li>
+		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes" on:click={clickHandler}>deportes</a></li>
+		<li><a aria-current="{segment === 'nosotros' ? 'page' : undefined}" href="nosotros" on:click={clickHandler}>nosotros</a></li>
 	</ul>
 </nav>

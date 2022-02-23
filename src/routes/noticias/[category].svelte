@@ -1,8 +1,12 @@
 <script>
 	import Lazy from 'svelte-lazy';
 
+	import { publish } from "../../support/events"
+
 	export let news
 	export let category
+
+	publish('update_menu', category)
 
 	const sections = {
 		negocios: {
