@@ -7,15 +7,15 @@
 	const sections = {
 		negocios: {
 			title: 'Últimas Noticias de México sobre Negocios',
-			description: 'Conoce las Noticias de Últimas sobre Negocios de México.'
+			description: 'Conoce las Últimas Noticias sobre Negocios de México.'
 		},
 		politica: {
 			title: 'Últimas Noticias de México sobre Política',
-			description: 'Conoce las Noticias de Últimas sobre Política.'
+			description: 'Conoce las Últimas Noticias sobre Política.'
 		},
 		deportes: {
 			title: ' Últimas Noticias de México sobre Deportes',
-			description: 'Conoce las Noticias de Últimas sobre Deportes.'
+			description: 'Conoce las Últimas Noticias sobre Deportes.'
 		},
 	}
 </script>
@@ -113,7 +113,7 @@
 				<p>{description}</p>
 			{/each}
 		</div>
-		<span>noticia extraidas de {item.source}</span>
+		<span>noticia de {item.source}</span>
 	</div>
 </div>
 {/each}

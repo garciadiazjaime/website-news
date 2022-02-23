@@ -2,7 +2,7 @@
 	import Lazy from 'svelte-lazy';
 
 	export let news
-	const title = 'Noticias de hoy. Últimas Noticias de México'
+	const title = 'Últimas Noticias de México. Entérate de los últimos acontecimientos.'
 	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios, deportes y más.'
 </script>
 
@@ -12,7 +12,7 @@
 		const news = await response.json();
 
 		return {
-			news
+			news: news.slice(0, 27)
 		}
 	}
 </script>
@@ -97,7 +97,7 @@
 				<p>{description}</p>
 			{/each}
 		</div>
-		<span>noticia extraidas de {item.source}</span>
+		<span>noticia de {item.source}</span>
 	</div>
 </div>
 {/each}

@@ -38,11 +38,18 @@
 	que suceden en nuestro país a través de una plataforma rápida y amigable.
 </p>
 <footer>
+	<div>
+		Síguenos en
+		<ul>
+			<li><a href="https://www.instagram.com/ultimasnoticiasmexico/" target="_blank" title="Últimas Noticias de México">Instagram</a></li>
+		</ul>
+	</div>
+	<br />
 	Proyecto en Colaboración con: 
 	<ul>
 		<li><a href="https://www.garitacenter.com/">Reporte de Garitas</a></li>
 		<li><a href="https://www.feedmetj.com/">Restaurantes en Tijuana</a></li>
-		<li><a href="https://www.noticiasmexico.org/">Las Últimas noticias de México</a></li>
+		<li><a href="https://www.playami.com/">Restaurantes en Playas de Tijuana</a></li>
 		<li><a href="https://www.comprarcasatijuana.com/">Comprar Casa en Tijuana</a></li>
 		<li><a href="https://www.larutadelvinoensenada.com/">La Ruta del Vino Ensenada</a></li>
 		<li><a href="https://www.mintitmedia.com/">Desarrollo Web en Tijuana</a></li>
