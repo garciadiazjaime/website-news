@@ -8,11 +8,11 @@
 
 ### Playami
 
-[Qué comer en Playas de Tijuana?](http://www.playami.com/)
+[Restaurantes en Playas de Tijuana](http://www.playami.com/)
 
 ### Feedmetj
 
-[Qué comer en Tijuana?](https://www.feedmetj.com/)
+[Restaurantes en Tijuana](https://www.feedmetj.com/)
 
 ### Comprar Casa Tijuana
 
