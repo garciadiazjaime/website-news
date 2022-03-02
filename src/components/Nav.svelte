@@ -59,10 +59,10 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="." on:click={clickHandler}>noticias</a></li>
-		<li><a aria-current="{segment === 'negocios' ? 'page' : undefined}" href="noticias/negocios" on:click={clickHandler}>negocios</a></li>
-		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica" on:click={clickHandler}>política</a></li>
-		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes" on:click={clickHandler}>deportes</a></li>
-		<li><a aria-current="{segment === 'nosotros' ? 'page' : undefined}" href="nosotros" on:click={clickHandler}>nosotros</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="." on:click={clickHandler}>Noticias</a></li>
+		<li><a aria-current="{segment === 'negocios' ? 'page' : undefined}" href="noticias/negocios" on:click={clickHandler}>Negocios</a></li>
+		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica" on:click={clickHandler}>Política</a></li>
+		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes" on:click={clickHandler}>Deportes</a></li>
+		<li><a aria-current="{segment === 'ucrania' ? 'page' : undefined}" href="noticias/ucrania" on:click={clickHandler}>Ucrania</a></li>
 	</ul>
 </nav>

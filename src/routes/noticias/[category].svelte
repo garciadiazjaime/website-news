@@ -21,6 +21,10 @@
 			title: ' Últimas Noticias de México sobre Deportes',
 			description: 'Conoce las Últimas Noticias sobre Deportes.'
 		},
+		ucrania: {
+			title: ' Últimas Noticias sobre Ucrania',
+			description: 'Conoce las Últimas Noticias sobre Ucrania.'
+		}
 	}
 </script>
 
@@ -38,46 +42,52 @@
 </script>
 
 <style>
-	.item {
-		margin-bottom: 52px;
+	ul {
+		padding: 0;
+		list-style-type: none;
 	}
 
-	.image-container {
-		margin: 0 auto;
-		width: 100%;
+	li {
+		margin: 40px 0;
 	}
+
 	img {
+		height: 454px;
 		width: 100%;
-		height: 300px;
-		object-fit: contain;
+		object-fit: cover;
 	}
 
-	.content {
-		padding: 12px;
-	}
-	.description {
-		margin-bottom: 12px;
+	.cover {
+		padding: 220px 0;
+		background-color: #db1a22;
+		color: white;
+		text-align: center;	
 	}
 
-	.description p {
-		word-break: break-word;
+	h2, h3, p {
+		padding: 0 12px;
 	}
 
 	a {
 		text-decoration: none;
 	}
 
-	@media (max-width: 480px) {
-		h1 {
-			padding: 222px 0;
-			background-color: #000;
-			color: #FFF;
-			text-align: center;
-			margin-bottom: 20px;
-		}
-		.item {
-			display: block;
-		}
+	small {
+		height: 24px;
+		width: 24px;
+		background-color: #db1a22;
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		font-weight: bold;
+		margin-left: 12px;
+	}
+
+	p {
+		word-break: break-word;
 	}
 </style>
 
@@ -88,38 +98,32 @@
 	<meta property="og:image" content="https://www.noticiasmexico.org/banner.webp">
 	<meta property="og:url" content="https://www.noticiasmexico.org/">
 	<meta name="description" content={sections[category].description}>
-	<link href="https://www.google-analytics.com" rel="dns-prefetch">
 </svelte:head>
 
-<h1>{sections[category].title}</h1>
+<div class="cover">
+	<h1>{sections[category].title}</h1>
+</div>
 
-{#each news as item, index}
-<div class="item"
-	data-date={item.createdAt}
-	data-id={item._id}
-	>
-	<div class="content">
+<ul>
+	{#each news as item, index}
+	<li>
+		<small>{index+1}</small>
 		<h2>
-			{index + 1} - 
 			<a href={item.url} target="_blank" rel="nofollow noreferrer">
 				{item.title}
 			</a>
 		</h2>
-	</div>
-	<div class="image-container">
+		<h3>noticia de {item.source}</h3>
 		<Lazy height={300}>
 			<img src={item.image} alt={`Noticia: ${item.title}`} />
 		</Lazy>
-	</div>
-	<div class="content">
 		<div class="description">
 			{#each item.description as description}
 				<p>{description}</p>
 			{/each}
 		</div>
-		<span>noticia de {item.source}</span>
-	</div>
-</div>
-{/each}
+	</li>
+	{/each}
+</ul>
 
 <p>{sections[category].description}</p>

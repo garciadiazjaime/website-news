@@ -5,24 +5,17 @@
 </script>
 
 <style>
-	main {
+	main, footer {
 		position: relative;
-		max-width: 1280px;
+		max-width: 56em;
 		background-color: white;
 		margin: 0 auto;
 		box-sizing: border-box;
-		padding: 12px;
+		font-size: 1.2em;
 	}
-
-	@media (max-width: 480px) {
-		main {
-			font-size: 1.4em;
-			padding: 0;
-		}
-	}
-
-	footer {
-		padding: 0 12px;
+	ul {
+		padding: 0;
+		list-style-type: none;
 	}
 </style>
 
@@ -32,20 +25,24 @@
 	<slot></slot>
 </main>
 
-<p>
-	Noticias México, tiene como objectivo dar a conocer las últimas noticias que los diferentes
-	medios de comunicación publican en México. La intención es tenerte informado de los acontecimientos
-	que suceden en nuestro país a través de una plataforma rápida y amigable.
-</p>
 <footer>
+	<p>
+		Noticias México, tiene como objectivo dar a conocer las últimas noticias que los diferentes
+		medios de comunicación publican en México. La intención es tenerte informado de los acontecimientos
+		que suceden en nuestro país a través de una plataforma rápida y amigable.
+	</p>
+
 	<div>
 		Síguenos en
 		<ul>
 			<li><a href="https://www.instagram.com/ultimasnoticiasmexico/" target="_blank" title="Últimas Noticias de México">Instagram</a></li>
 		</ul>
 	</div>
-	<br />
-	Proyecto en Colaboración con: 
+	
+	
+	<p>
+		Proyecto en Colaboración con: 
+	</p>
 	<ul>
 		<li><a href="https://www.garitacenter.com/">Reporte de Garitas</a></li>
 		<li><a href="https://www.feedmetj.com/">Restaurantes en Tijuana</a></li>
