@@ -1,5 +1,5 @@
 <script>
-	import Lazy from 'svelte-lazy';
+	import Card from '../../components/Card.svelte'
 
 	import { publish } from "../../support/events"
 
@@ -51,43 +51,11 @@
 		margin: 40px 0;
 	}
 
-	img {
-		height: 454px;
-		width: 100%;
-		object-fit: cover;
-	}
-
 	.cover {
 		padding: 220px 0;
 		background-color: #db1a22;
 		color: white;
 		text-align: center;	
-	}
-
-	h2, h3, p {
-		padding: 0 12px;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	small {
-		height: 24px;
-		width: 24px;
-		background-color: #db1a22;
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 12px;
-		font-weight: bold;
-		margin-left: 12px;
-	}
-
-	p {
-		word-break: break-word;
 	}
 </style>
 
@@ -105,21 +73,14 @@
 <ul>
 	{#each news as item, index}
 	<li>
-		<small>{index+1}</small>
-		<h2>
-			<a href={item.url} target="_blank" rel="nofollow noreferrer">
-				{item.title}
-			</a>
-		</h2>
-		<h3>noticia de {item.source}</h3>
-		<Lazy height={300}>
-			<img src={item.image} alt={`Noticia: ${item.title}`} />
-		</Lazy>
-		<div class="description">
-			{#each item.description as description}
-				<p>{description}</p>
-			{/each}
-		</div>
+		<Card 
+			index={index+1}
+			lint={item.url}
+			title={item.title}
+			subtitle={`Noticia de ${item.source}`}
+			image={item.image}
+			content={item.description}
+		/>
 	</li>
 	{/each}
 </ul>
