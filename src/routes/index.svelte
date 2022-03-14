@@ -43,7 +43,7 @@
 	<li>
 		<Card 
 			index={index+1}
-			lint={item.url}
+			link={item.url}
 			title={item.title}
 			subtitle={`Noticia de ${item.source}`}
 			image={item.image}

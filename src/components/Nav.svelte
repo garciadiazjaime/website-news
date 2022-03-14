@@ -64,5 +64,7 @@
 		<li><a aria-current="{segment === 'politica' ? 'page' : undefined}" href="noticias/politica" on:click={clickHandler}>Política</a></li>
 		<li><a aria-current="{segment === 'deportes' ? 'page' : undefined}" href="noticias/deportes" on:click={clickHandler}>Deportes</a></li>
 		<li><a aria-current="{segment === 'ucrania' ? 'page' : undefined}" href="noticias/ucrania" on:click={clickHandler}>Ucrania</a></li>
+		<li><a aria-current="{segment === 'cripto' ? 'page' : undefined}" href="noticias/cripto" on:click={clickHandler}>Cripto</a></li>
+		<li><a aria-current="{segment === 'covid' ? 'page' : undefined}" href="noticias/covid" on:click={clickHandler}>Covid</a></li>
 	</ul>
 </nav>

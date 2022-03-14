@@ -1,6 +1,6 @@
 <script>
 	import Card from '../../components/Card.svelte'
-	import Cover from '../components/Cover.svelte'
+	import Cover from '../../components/Cover.svelte'
 
 	import { publish } from "../../support/events"
 
@@ -25,6 +25,14 @@
 		ucrania: {
 			title: ' Últimas Noticias sobre Ucrania',
 			description: 'Conoce las Últimas Noticias sobre Ucrania.'
+		},
+		cripto: {
+			title: ' Últimas Noticias sobre Criptomonedas',
+			description: 'Conoce las Últimas Noticias sobre Criptomonedas.'
+		},
+		covid: {
+			title: ' Últimas Noticias sobre Covid',
+			description: 'Conoce las Últimas Noticias sobre Covid.'
 		}
 	}
 </script>

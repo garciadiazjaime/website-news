@@ -7,6 +7,14 @@
   export let subtitle
   export let image
   export let content
+
+	let isOpen = false
+
+	function clickHandler(event) {
+		event.preventDefault()
+
+		isOpen = true
+	}
 </script>
 
 <style>
@@ -47,6 +55,10 @@
 	p {
 		word-break: break-word;
 	}
+
+	.read-more {
+		text-decoration: underline;
+	}
 </style>
 
 <small>{index}</small>
@@ -60,7 +72,14 @@
   <img src={image} alt={title} />
 </Lazy>
 <div class="description">
-  {#each content as description}
+  {#each content.slice(0, isOpen ? content.length : 3) as description}
     <p>{description}</p>
   {/each}
 </div>
+
+
+{#if !isOpen}
+<p>
+	<a class="read-more" href="/" on:click={clickHandler}>leer toda la noticia</a>
+</p>
+{/if}
