@@ -44,7 +44,7 @@
 		Proyecto en Colaboración con: 
 	</p>
 	<ul>
-		<li><a href="https://www.garitacenter.com/">Reporte de Garitas</a></li>
+		<li><a href="https://www.garitacenter.com/">Reporte de Garitas Tijuana</a></li>
 		<li><a href="https://www.feedmetj.com/">Restaurantes en Tijuana</a></li>
 		<li><a href="https://www.playami.com/">Restaurantes en Playas de Tijuana</a></li>
 		<li><a href="https://www.comprarcasatijuana.com/">Comprar Casa en Tijuana</a></li>

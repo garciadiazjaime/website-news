@@ -2,7 +2,7 @@
 	import Lazy from 'svelte-lazy';
 
 	export let news
-	const title = 'Últimas Noticias de México. Entérate de los últimos acontecimientos.'
+	const title = 'Últimas Noticias de México Hoy. Política, Negocios, Deportes'
 	const description = 'Noticias de México hoy. Conoce las Noticias de Últimas hora de México. Sucesos actuales, política, negocios, deportes y más.'
 </script>
 
@@ -40,7 +40,13 @@
 		text-align: center;	
 	}
 
-	h2, h3, p {
+	h2, p {
+		padding: 0 12px;
+		margin-bottom: 0;
+	}
+
+	strong {
+		font-weight: normal;
 		padding: 0 12px;
 	}
 
@@ -71,8 +77,6 @@
 	<title>{title}</title>
 	<meta property="og:title" content={title}>
 	<meta property="og:description" content={description}>
-	<meta property="og:image" content="https://www.noticiasmexico.org/banner.webp">
-	<meta property="og:url" content="https://www.noticiasmexico.org/">
 	<meta name="description" content={description}>
 </svelte:head>
 
@@ -89,7 +93,7 @@
 				{item.title}
 			</a>
 		</h2>
-		<h3>noticia de {item.source}</h3>
+		<strong>Noticia de {item.source}</strong>
 		<Lazy height={300}>
 			<img src={item.image} alt={`Noticia: ${item.title}`} />
 		</Lazy>

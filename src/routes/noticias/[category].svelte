@@ -95,8 +95,6 @@
 	<title>{sections[category].title}</title>
 	<meta property="og:title" content={sections[category].title}>
 	<meta property="og:description" content={sections[category].description}>
-	<meta property="og:image" content="https://www.noticiasmexico.org/banner.webp">
-	<meta property="og:url" content="https://www.noticiasmexico.org/">
 	<meta name="description" content={sections[category].description}>
 </svelte:head>
 
