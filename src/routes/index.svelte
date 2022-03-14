@@ -1,5 +1,6 @@
 <script>
 	import Card from '../components/Card.svelte'
+	import Cover from '../components/Cover.svelte'
 
 	export let news
 	const title = 'Últimas Noticias de México Hoy. Política, Negocios, Deportes'
@@ -26,13 +27,6 @@
 	li {
 		margin: 40px 0;
 	}
-
-	.cover {
-		padding: 220px 0;
-		background-color: #db1a22;
-		color: white;
-		text-align: center;	
-	}
 </style>
 
 <svelte:head>
@@ -42,9 +36,7 @@
 	<meta name="description" content={description}>
 </svelte:head>
 
-<div class="cover">
-	<h1>Últimas Noticias de México</h1>
-</div>
+<Cover title="Últimas Noticias de México" />
 
 <ul>
 	{#each news as item, index}
